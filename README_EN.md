@@ -2,7 +2,7 @@
 
 Carbonyl translates Carbon into C. Written in C#.
 
-README: 英格兰英语 | [Simplified Chinese](README.md)
+README: 英格兰语 | [Simplified Chinese](README.md)
 
 ---------------------
 
