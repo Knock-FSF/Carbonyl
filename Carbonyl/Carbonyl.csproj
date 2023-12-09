@@ -5,6 +5,7 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <UserSecretsId>87d9e8b7-09e6-4782-a2af-f1c0661e0cfb</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -38,6 +39,16 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>LangResource.resx</DependentUpon>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Spectre.Console" Version="0.48.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Class\Workflows\FileInput\" />
+      <Folder Include="Class\Workflows\Preprocess\" />
+      <Folder Include="Class\Workflows\SyntaxAnalyse\" />
     </ItemGroup>
 
 </Project>
