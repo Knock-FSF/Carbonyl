@@ -7,4 +7,37 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\Languages\LangResource.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>LangResource.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Languages\LangResource.en-us.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>LangResource.en-us.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Languages\LangResource.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>LangResource.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\Languages\LangResource.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>LangResource.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Languages\LangResource.en-us.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>LangResource.en-us.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Languages\LangResource.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>LangResource.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>
