@@ -46,8 +46,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Class\Workflows\FileInput\" />
-      <Folder Include="Class\Workflows\Preprocess\" />
       <Folder Include="Class\Workflows\SyntaxAnalyse\" />
     </ItemGroup>
 
