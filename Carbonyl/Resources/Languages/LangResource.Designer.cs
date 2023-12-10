@@ -58,5 +58,41 @@ namespace Carbonyl.Resources.Languages {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Carbon Translator To C.
+        /// </summary>
+        internal static string CarbonTranslatorToC {
+            get {
+                return ResourceManager.GetString("CarbonTranslatorToC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File reading failed!.
+        /// </summary>
+        internal static string FileReadingFailed {
+            get {
+                return ResourceManager.GetString("FileReadingFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please specify a file!.
+        /// </summary>
+        internal static string PleaseSpecifyAFile {
+            get {
+                return ResourceManager.GetString("PleaseSpecifyAFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Symbol pair check failed!.
+        /// </summary>
+        internal static string SymbolPairCheckFailed {
+            get {
+                return ResourceManager.GetString("SymbolPairCheckFailed", resourceCulture);
+            }
+        }
     }
 }
