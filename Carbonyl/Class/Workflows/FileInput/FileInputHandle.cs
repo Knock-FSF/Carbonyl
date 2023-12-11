@@ -16,5 +16,4 @@ public static class FileInputHandle
             return null;
         }
     }
-
 }

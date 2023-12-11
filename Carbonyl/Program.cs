@@ -1,14 +1,10 @@
 ﻿using Carbonyl.Class;
 using Carbonyl.Class.CommandHandler;
-using Carbonyl.Class.Commands;
 using Carbonyl.Class.Commands.HelpCommands;
 using Carbonyl.Class.Commands.RunCommands;
-using Carbonyl.Class.Workflows.FileInput;
-using Carbonyl.Class.Workflows.Preprocess;
-using Carbonyl.Resources.Languages;
-using Spectre.Console;
 
 namespace Carbonyl;
+
 public static class Program
 {
     private static async Task<int> Main(string[] args)

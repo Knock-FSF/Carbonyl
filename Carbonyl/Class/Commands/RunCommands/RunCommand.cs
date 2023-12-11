@@ -1,8 +1,4 @@
 ﻿using Carbonyl.Class.CommandHandler.Interfaces;
-using Carbonyl.Class.Workflows.FileInput;
-using Carbonyl.Class.Workflows.Preprocess;
-using Carbonyl.Resources.Languages;
-using Spectre.Console;
 
 namespace Carbonyl.Class.Commands.RunCommands;
 
@@ -10,6 +6,7 @@ internal class RunCommand : ICommand
 {
     public string Identifier { get; set; } = null!;
     public List<ICommand> SubCommands { get; set; } = new();
+
     public async Task<int> Execute(string[] args)
     {
         /*/* --- [ 程序 ] --- #1#

@@ -16,6 +16,7 @@ public class CommandParser(List<ICommand> commands)
                 var subParser = new CommandParser(command.SubCommands);
                 return subParser.ParseCommand(args.Skip(1).ToArray());
             }
+
             // return await command.Execute(args.Skip(1).ToArray());
             return command;
         }

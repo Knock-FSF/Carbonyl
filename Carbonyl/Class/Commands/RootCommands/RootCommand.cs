@@ -7,6 +7,7 @@ public class RootCommand : ICommand
 {
     public string? Identifier { get; set; } = null!;
     public List<ICommand> SubCommands { get; set; } = new();
+
     public async Task<int> Execute(string[] args)
     {
         Console.WriteLine();

@@ -249,6 +249,7 @@ public static class Program
                                                       Example Code....
                                                    }
                                                    """;
+
     public const string TokeniseExampleCode = """
                                               int main()
                                               {
@@ -261,7 +262,7 @@ public static class Program
                                                 };
                                               }
                                               """;
-                                            
+
 
     private static void Main(string[] args)
     {
@@ -285,12 +286,12 @@ public static class Program
         Console.WriteLine("[注] 宏或预处理器指令部分尚未完善");
         /* ------ 短语化 ------------------------ */
         Console.WriteLine("短语化 - 代码例子:");
-        string[] tokeniseTest = TokeniseString(TokeniseExampleCode).ToArray();
+        var tokeniseTest = TokeniseString(TokeniseExampleCode).ToArray();
         foreach (var tks in tokeniseTest)
             Console.WriteLine(tks);
         /* ------ 合规可处理源代码 ---------------- */
         Console.WriteLine("合规可处理源代码:");
-        string removedCommentsCode = RemoveComments(CarbonExampleCode);
+        var removedCommentsCode = RemoveComments(CarbonExampleCode);
         Console.WriteLine($"剔除注释: {removedCommentsCode}");
         Console.WriteLine($"符号对检查: {AreParenthesesBalanced(removedCommentsCode)}");
         Console.WriteLine("记录宏（预处理器指令） - 暂时跳过...");
@@ -301,16 +302,16 @@ public static class Program
 
     public static bool AreParenthesesBalanced(string expression)
     {
-        Stack<char> stack = new Stack<char>();
+        var stack = new Stack<char>();
 
-        Dictionary<char, char> mappings = new Dictionary<char, char>
+        var mappings = new Dictionary<char, char>
         {
             { ')', '(' },
             { ']', '[' },
-            { '}', '{' },
+            { '}', '{' }
             //{ '>', '<' }
         };
-        
+
         /*
         for (int i = 0; i < expression.Length; i++)
         {
@@ -343,34 +344,24 @@ public static class Program
             }
         }
         */
-        
-        foreach (char c in expression)
-        {
-            
+
+        foreach (var c in expression)
             if (mappings.Values.Contains(c))
             {
                 stack.Push(c);
             }
             else if (mappings.Keys.Contains(c))
             {
-                if (stack.Count == 0 || stack.Pop() != mappings[c])
-                {
-                    return false;
-                }
+                if (stack.Count == 0 || stack.Pop() != mappings[c]) return false;
             }
             else if (c == '\'' || c == '\"')
             {
                 if (stack.Count > 0 && stack.Peek() == c)
-                {
                     stack.Pop();
-                }
                 else
-                {
                     stack.Push(c);
-                }
             }
-        }
-        
+
         return stack.Count == 0;
     }
 
@@ -379,6 +370,7 @@ public static class Program
         var re = @"(@(?:""[^""]*"")+|""[^""]*"")|//.*|/\*(?s:.*?)\*/";
         return Regex.Replace(code, re, "$1");
     }
+
     /* 处理单行宏
     public static List<string> CollectPreprocessorDirectives(string code)
     {
@@ -400,12 +392,12 @@ public static class Program
     */
     public static List<string> ExtractCPreprocessorDirectives(string code)
     {
-        List<string> directives = new List<string>();
+        var directives = new List<string>();
 
         // 获取代码行，跳过空行
         var lines = code.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
 
-        for (int i = 0; i < lines.Length; i++)
+        for (var i = 0; i < lines.Length; i++)
         {
             var line = lines[i];
 
@@ -421,10 +413,7 @@ public static class Program
                     trimmedLine = trimmedLine.Substring(0, trimmedLine.Length - 1);
 
                     // 将下一行添加到当前行
-                    if (++i < lines.Length)
-                    {
-                        trimmedLine += lines[i].Trim();
-                    }
+                    if (++i < lines.Length) trimmedLine += lines[i].Trim();
                 }
 
                 directives.Add(trimmedLine);
@@ -433,7 +422,7 @@ public static class Program
 
         return directives;
     }
-    
+
     public static List<string> TokeniseString(string code)
     {
         // 用一个或者多个空格字符分割字符串并将结果作为列表返回（目前效果好且长度短的方法（（
