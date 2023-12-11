@@ -6,7 +6,7 @@ namespace Carbonyl.Class.CommandHandler;
 
 public class CommandRunner(CommandManager commandManager)
 {
-    public async Task<int> ExecuteAsync(List<ICommand> commands, IEnumerable<string> args)
+    public async Task<int> ExecuteAsync(List<ICommand> commands, IEnumerable<string>? args)
     {
         args ??= new List<string>();
         args = args.ToList();

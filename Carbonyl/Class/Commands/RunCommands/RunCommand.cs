@@ -2,7 +2,7 @@
 
 namespace Carbonyl.Class.Commands.RunCommands;
 
-internal class RunCommand : ICommand
+public class RunCommand : ICommand
 {
     public string Identifier { get; set; } = null!;
     public List<ICommand> SubCommands { get; set; } = new();

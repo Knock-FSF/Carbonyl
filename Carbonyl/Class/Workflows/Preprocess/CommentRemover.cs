@@ -6,7 +6,7 @@ public static class CommentRemover
 {
     public static string Remove(string code)
     {
-        var re = @"(@(?:""[^""]*"")+|""[^""]*"")|//.*|/\*(?s:.*?)\*/";
+        const string re = @"(@(?:""[^""]*"")+|""[^""]*"")|//.*|/\*(?s:.*?)\*/";
         return Regex.Replace(code, re, "$1");
     }
 }

@@ -10,12 +10,12 @@ public static class MacroParser
         // 遍历代码的每一行
         for (var i = 0; i < lines.Length; i++)
             // 检查该行是否以#开头的宏
-            if (lines[i].TrimStart().StartsWith("#"))
+            if (lines[i].TrimStart().StartsWith('#'))
             {
                 var line = lines[i].TrimStart();
 
                 // 判断是否有反斜杠，如果有就删除并继续读取下一行
-                while (line.EndsWith("\\"))
+                while (line.EndsWith('\\'))
                 {
                     line = line.Substring(0, line.Length - 1);
 
