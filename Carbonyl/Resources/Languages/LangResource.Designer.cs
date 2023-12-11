@@ -69,11 +69,29 @@ namespace Carbonyl.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Display help..
+        /// </summary>
+        internal static string DisplayHelp {
+            get {
+                return ResourceManager.GetString("DisplayHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to File reading failed!.
         /// </summary>
         internal static string FileReadingFailed {
             get {
                 return ResourceManager.GetString("FileReadingFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Options:.
+        /// </summary>
+        internal static string Options {
+            get {
+                return ResourceManager.GetString("Options", resourceCulture);
             }
         }
         
@@ -92,6 +110,15 @@ namespace Carbonyl.Resources.Languages {
         internal static string SymbolPairCheckFailed {
             get {
                 return ResourceManager.GetString("SymbolPairCheckFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usage.
+        /// </summary>
+        internal static string UsageCarbonylOptions {
+            get {
+                return ResourceManager.GetString("UsageCarbonylOptions", resourceCulture);
             }
         }
     }

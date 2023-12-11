@@ -23,4 +23,13 @@
     <data name="SymbolPairCheckFailed" xml:space="preserve">
         <value>符号对检查失败！</value>
     </data>
+    <data name="UsageCarbonylOptions" xml:space="preserve">
+        <value>用法: Carbonyl [选项]</value>
+    </data>
+    <data name="Options" xml:space="preserve">
+        <value>选项:</value>
+    </data>
+    <data name="DisplayHelp" xml:space="preserve">
+        <value>显示帮助。</value>
+    </data>
 </root>

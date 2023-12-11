@@ -23,4 +23,13 @@
     <data name="SymbolPairCheckFailed" xml:space="preserve">
         <value>Symbol pair check failed!</value>
     </data>
+    <data name="UsageCarbonylOptions" xml:space="preserve">
+        <value>Usage</value>
+    </data>
+    <data name="Options" xml:space="preserve">
+        <value>Options:</value>
+    </data>
+    <data name="DisplayHelp" xml:space="preserve">
+        <value>Display help.</value>
+    </data>
 </root>
